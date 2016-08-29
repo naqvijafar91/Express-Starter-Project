@@ -2,7 +2,7 @@
  * Created by jafarnaqvi on 10/08/16.
  */
 
-var request = require('request-promise');
+//var request = require('request-promise');
 
 var callback = function (req, res) {
 

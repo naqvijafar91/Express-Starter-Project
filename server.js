@@ -52,14 +52,14 @@ var accessLogStream = FileStreamRotator.getStream({
 app.use(morgan('combined', {stream: accessLogStream}));
 app.use(morgan('dev'));
 
-mongoose.connect(config.database, function (err) {
+/*mongoose.connect(config.database, function (err) {
     if (err)
         console.log(err);
     else {
         console.log('database connected');
     }
 
-});
+});*/
 
 
 app.use(express.static(__dirname + '/public'));
@@ -82,6 +82,8 @@ var cors = function (req, res, next) {
 };
 
 app.use(cors);
+
+app.use('/api',require('./modules/sample/router'));
 
 /*Sample Routing
  *

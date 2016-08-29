@@ -8,6 +8,6 @@ var router = express.Router();
 var Controller=require('./controller');
 
 router.route('^/callback/$').get( Controller.callback);
-router.route('^/redirecttest/$').get(Controller.redirect);
+//router.route('^/redirecttest/$').get(Controller.redirect);
 
 module.exports = router;
